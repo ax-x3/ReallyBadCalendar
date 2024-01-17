@@ -106,9 +106,9 @@ function load() {
     }
     document.getElementById("greeting").innerHTML += ",";
     
-    document.getElementById("time").innerHTML += "It might be <b> " + regionTime + " </b> in <span style='line-height: 0px;'>" + stupidRegion + "</span>.";
+    document.getElementById("time").innerHTML = "It might be <b> " + regionTime + " </b> in <span style='line-height: 0px;'>" + stupidRegion + "</span>.";
 
-    document.getElementById("date").innerHTML += "Today is<b> " + localDate + "</b>.";
+    document.getElementById("date").innerHTML = "Today is<b> " + localDate + "</b>.";
 }
 
 function dark() {
@@ -118,6 +118,7 @@ function dark() {
         theme.innerHTML = "Light";
         document.getElementById("htmlBody").style.backgroundColor = "#000";
     } else {
+        load();
         theme.className = "Light";
         theme.innerHTML = "Dark";
         document.getElementById("htmlBody").style.backgroundColor = "";
