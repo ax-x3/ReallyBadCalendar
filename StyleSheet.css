@@ -25,11 +25,11 @@
 #theme {
     position: fixed;
     bottom: 10px;
-    left: calc(50% - 35px);
+    left: calc(50% - 50px);
 }
 
 .Light {
-    width: 70px;
+    width: 100px;
     height: 40px;
     background-color: #fff;
     color: #000c;
@@ -43,7 +43,7 @@
 }
 
 .Dark {
-    width: 70px;
+    width: 100px;
     height: 40px;
     background-color: #050;
     color: #0c0;
