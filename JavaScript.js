@@ -85,7 +85,7 @@ function load() {
             stupidYear -= 1;
         }
         let stupidDate = new Date(stupidYear, stupidMonth, 1);
-        localDate = months[stupidMonth] + " " + Math.floor((deviceDate.getTime() - stupidDate.getTime()) / 86400000).toString() + ", " + stupidYear;
+        localDate = months[stupidMonth] + " " + Math.ceil((deviceDate.getTime() - stupidDate.getTime()) / 86400000).toString() + ", " + stupidYear;
     } else if (dateID == 3) {
         localDate = "year 13.79b";
     } else if (dateID == 4) {
