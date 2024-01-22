@@ -106,7 +106,7 @@ function load() {
     }
     document.getElementById("greeting").innerHTML += ",";
     
-    document.getElementById("time").innerHTML = "It might be <b> " + regionTime + " </b> in <span style='line-height: 0px;'>" + stupidRegion + "</span>.";
+    document.getElementById("time").innerHTML = "It's <b> " + regionTime + " </b> in <span style='line-height: 0px;'>" + stupidRegion + "</span>.";
 
     document.getElementById("date").innerHTML = "Today is<b> " + localDate + "</b>.";
 }
