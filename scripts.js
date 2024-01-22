@@ -67,18 +67,10 @@ function load() {
     let regionTime = regionHour.toString() + ":" + localMinute.toString().padStart(2, '0');
 
 
-    const dateID = Math.floor(Math.random() * 6);
+    const dateID = Math.floor(Math.random() * 2);
     let localDate = "";
 
     if (dateID == 0) {
-        if (Math.random() > 0.25) {
-            localDate = "the day";
-        } else {
-            localDate = "not the day";
-        }
-    } else if (dateID == 1) {
-        localDate = Math.floor(deviceDate.getTime() / 1000);
-    } else if (dateID == 2) {
         let stupidMonth = Math.floor(Math.random() * 12);
         let stupidYear = deviceDate.getFullYear();
         if (deviceDate.getMonth() - 1 <= stupidMonth) {
@@ -86,15 +78,10 @@ function load() {
         }
         let stupidDate = new Date(stupidYear, stupidMonth, 1);
         localDate = months[stupidMonth] + " " + Math.ceil((deviceDate.getTime() - stupidDate.getTime()) / 86400000).toString() + ", " + stupidYear;
-    } else if (dateID == 3) {
-        localDate = "year 13.79b";
-    } else if (dateID == 4) {
-        localDate = deviceDate.toISOString();
-    } else if (dateID == 5) {
+    } else if (dateID == 1) {
         let stupidDate = new Date(deviceDate.getTime() - Math.random() * 31536000000);
         localDate = "not " + days[stupidDate.getDay()] + ", " + months[stupidDate.getMonth()] + " " + stupidDate.getDate().toString() + ", " + stupidDate.getFullYear().toString();
     }
-
 
     if (regionHour < 12) {
         document.getElementById("greeting").innerHTML = greetings[0];
